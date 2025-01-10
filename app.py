@@ -32,7 +32,7 @@ def generate_response(question,llm,temperature,max_tokens):
 
 ## #Title of the app
 st.title("CHATBOT MADE WITH LOVE")
-
+st.secrets["LANGCHAIN_API_KEY"]
 
 ## Select the OpenAI model
 llm=st.sidebar.selectbox("Select Open Source model",["mistral"])
