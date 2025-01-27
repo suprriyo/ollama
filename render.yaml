@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: chatbot
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app1:app
+    envVars:
+      - key: LANGCHAIN_API_KEY
+        value: $LANGCHAIN_API_KEY
