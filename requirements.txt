@@ -32,3 +32,4 @@ numexpr
 huggingface_hub
 flask
 gunicorn
+streamlit
