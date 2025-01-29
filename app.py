@@ -38,7 +38,7 @@ def generate_response(question, model, temperature, max_tokens):
 st.title("CHATBOT MADE WITH LOVE")
 
 # Select Groq model
-model = st.sidebar.selectbox("Select Model", ["mixtral-8x7b", "llama3-70b", "gemma-7b"])
+model = st.sidebar.selectbox("Select Model", ["Llama3-8b-8192"])
 
 # Adjust response parameters
 temperature = st.sidebar.slider("Temperature", min_value=0.0, max_value=1.0, value=0.7)
