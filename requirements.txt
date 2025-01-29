@@ -1,4 +1,4 @@
-langchain
+langchain-ollama
 python-dotenv
 ipykernel
 langchain-community
