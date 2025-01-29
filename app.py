@@ -9,7 +9,8 @@ from langchain_core.output_parsers import StrOutputParser
 load_dotenv()
 
 # Set API key from Streamlit secrets
-os.environ["GROQ_API_KEY"] = st.secrets["GROQ_API_KEY"]
+os.environ["GROQ_API_KEY"] = st.secrets["GROQ_API_KEY"]["api_key"]
+
 
 # Initialize Groq client
 groq_client = Groq(api_key=os.environ["GROQ_API_KEY"])
