@@ -8,10 +8,7 @@ from dotenv import load_dotenv
 # Load environment variables
 load_dotenv()
 
-# Set environment variables
-os.environ["LANGCHAIN_API_KEY"] = os.getenv("LANGCHAIN_API_KEY")
-os.environ["LANGCHAIN_TRACING_V2"] = "true"
-os.environ["LANGCHAIN_PROJECT"] = "Simple Q&A Chatbot with Groq"
+
 
 # Define the chat prompt template
 prompt = ChatPromptTemplate.from_messages(
