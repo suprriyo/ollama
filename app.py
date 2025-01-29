@@ -23,12 +23,17 @@ prompt=ChatPromptTemplate.from_messages(
     ]
 )
 
-def generate_response(question,llm,temperature,max_tokens):
-    llm=Ollama(model=llm)
-    output_parser=StrOutputParser()
-    chain=prompt|llm|output_parser
-    answer=chain.invoke({'question':question})
-    return answer
+def generate_response(question, llm, temperature, max_tokens):
+    try:
+        llm = Ollama(model=llm)
+        output_parser = StrOutputParser()
+        chain = prompt | llm | output_parser
+        answer = chain.invoke({'question': question})
+        return answer
+    except Exception as e:
+        st.write(f"An error occurred: {e}")
+        return "Sorry, something went wrong. Please try again later."
+
 
 ## #Title of the app
 st.title("CHATBOT MADE WITH LOVE")
