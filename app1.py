@@ -9,12 +9,10 @@ load_dotenv()
 
 app = Flask(__name__)
 
-# Langsmith Tracking
-#os.environ["LANGCHAIN_API_KEY"] = os.getenv("LANGCHAIN_API_KEY")
 os.environ["LANGCHAIN_TRACING_V2"] = "true"
 os.environ["LANGCHAIN_PROJECT"] = "Simple Q&A Chatbot With Ollama"
 
-# Prompt Template
+
 prompt = ChatPromptTemplate.from_messages(
     [
         ("system", "You are a helpful assistant. Please respond to the user queries"),
